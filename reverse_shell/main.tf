@@ -45,7 +45,7 @@ resource "aws_route_table_association" "assoc" {
   route_table_id = "${aws_route_table.r.id}"
 }
 
-resource "aws_security_group" "sg" {
+/* resource "aws_security_group" "sg" {
   name        = "tmp_vulnado_rev_shell_sg"
   vpc_id      = "${aws_vpc.main.id}"
 
@@ -69,7 +69,7 @@ resource "aws_security_group" "sg" {
     protocol  = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
+} */
 
 data "aws_ami" "amznlinux" {
   most_recent = true
